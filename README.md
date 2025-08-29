@@ -9,7 +9,7 @@ Designed to captivate recruiters and developers with professional UI/UX, smooth 
 
 Experience the portfolio live and see the animations in action!  
 
-[**View Live Demo**](https://your-portfolio-link)
+[**View Live Demo**](https://malikahmadrasheed.vercel.app/)
 
 <br>
 
@@ -119,11 +119,12 @@ Fork the repository.
 
 
 📬 Contact
-Portfolio: your-portfolio-link
 
-Twitter: @malikahmadrasheed
+- Portfolio: https://malikahmadrasheed.vercel.app/
 
-Email: malikahmad6666666@gmail.com
+- Twitter: @malikahmadrasheed
+
+- Email: malikahmad6666666@gmail.com
 
 
 

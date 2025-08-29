@@ -64,20 +64,24 @@ Installation
 
 Bash
 
-git clone https://github.com/ahmaddii/Gsap-Animated-Portfolio.git
-Navigate into the project directory and install the dependencies:
+- git clone https://github.com/ahmaddii/Gsap-Animated-Portfolio.git
+
+- Navigate into the project directory and install the dependencies:
 
 Bash
 
 cd Gsap-Animated-Portfolio
-npm install
-Start the development server:
+
+- npm install
+- Start the development server:
 
 Bash
 
-npm start
+- npm start
+
 🎨 How to Customize
-This portfolio is designed to be easily personalized. Just follow these steps:
+
+- This portfolio is designed to be easily personalized. Just follow these steps:
 
 - Replace content: Update the text, project details, and personal information in the React components (e.g., src/components/About.jsx).
 
@@ -87,7 +91,7 @@ This portfolio is designed to be easily personalized. Just follow these steps:
 
 🙌 Contributing
 
-If you have a feature idea or find a bug, I'd love to collaborate!
+- If you have a feature idea or find a bug, I'd love to collaborate!
 
 Fork the repository.
 
@@ -113,6 +117,3 @@ Email: malikahmad6666666@gmail.com
 If you find this project useful, a star on GitHub would be greatly appreciated!
 
 Made with Love in 🇵🇰
-
-Ask ChatGPT
->>>>>>> 1b4bb04911e7c8a3d8126fffcc7917775eb18e9e

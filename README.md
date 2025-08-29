@@ -29,7 +29,9 @@ Experience the portfolio live and see the animations in action!
 
 Export to Sheets
 
+
 💻 Key Features
+
 ⚡️ Built with React: A fast, component-driven UI for a modern web experience.
 
 🎞️ Smooth Animations: Powered by GSAP and Framer Motion for professional, high-performance transitions and effects.
@@ -49,6 +51,8 @@ Export to Sheets
 - Styling: Lucide Icons, Custom CSS, Google Fonts
 
 - Deployment: Vercel / Netlify / GitHub Pages
+
+
 
 📦 Getting Started
 Follow these steps to get a local copy of the project up and running.
@@ -79,6 +83,7 @@ Bash
 
 - npm start
 
+
 🎨 How to Customize
 
 - This portfolio is designed to be easily personalized. Just follow these steps:
@@ -89,9 +94,11 @@ Bash
 
 - Update animations (optional): Adjust the GSAP and Framer Motion configurations in the components to create your own unique animations.
 
+
 🙌 Contributing
 
 - If you have a feature idea or find a bug, I'd love to collaborate!
+
 
 Fork the repository.
 
@@ -103,9 +110,13 @@ Fork the repository.
 
 - Open a Pull Request.
 
+
+
 📄 License
 
 - This project is licensed under the MIT License - see the LICENSE file for details.
+
+
 
 📬 Contact
 Portfolio: your-portfolio-link
@@ -113,6 +124,8 @@ Portfolio: your-portfolio-link
 Twitter: @malikahmadrasheed
 
 Email: malikahmad6666666@gmail.com
+
+
 
 If you find this project useful, a star on GitHub would be greatly appreciated!
 

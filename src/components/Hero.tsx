@@ -420,7 +420,7 @@ const Hero = () => {
 
             <div className="flex flex-col sm:flex-row gap-4">
               <a
-                href="https://drive.google.com/file/d/15CjxsuuNaKkcKWxKlGy3MAkjiswI4AJ0/view?usp=sharing"
+                href="https://drive.google.com/file/d/1xfN_DqNemf0evN9KZ8G6Hdn7ASpPaThp/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center bg-gradient-primary hover:bg-gradient-hero text-white font-semibold px-6 py-3 rounded-lg shadow-glow transition-all duration-300"

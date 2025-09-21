@@ -51,7 +51,7 @@ const Experience = () => {
       title: "Associate Software Engineer – Flutter",
       company: "RentEase",
       location: "Islamabad, Pakistan",
-      duration: "June 205 - July 2025 (6 months)",
+      duration: "June 2025 - July 2025 (6 months)",
       description:
         "Created a Rental Home Solution in which User can Search his Good Home with Rental Listings",
       highlight:

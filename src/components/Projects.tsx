@@ -26,7 +26,7 @@ const Projects = () => {
       technologies: ["Flutter", "Dart", "Supabase", "Gemini APIs"],
       type: "Mobile App",
       users: "Published on Playstore",
-      liveUrl: "https://play.google.com/store/apps/details?id=com.finmind",
+      liveUrl: "https://github.com/ahmaddii",
       githubUrl: "https://github.com/ahmaddii",
     },
     {
@@ -37,7 +37,7 @@ const Projects = () => {
       technologies: ["Flutter", "Real-time APIs", "Listings Logic", "Google Maps"],
       type: "Mobile App",
       users: "Testing Users",
-      liveUrl: "https://rentease.vercel.app",
+      liveUrl: "https://github.com/ahmaddii",
       githubUrl: "https://github.com/ahmaddii",
     },
     {
@@ -47,7 +47,7 @@ const Projects = () => {
       technologies: ["Bootstrap", "PHP", "MySQL", "CSS"],
       type: "Web App",
       users: "100+ Users",
-      liveUrl: "https://digitalnexus.com",
+      liveUrl: "https://github.com/ahmaddii",
       githubUrl: "https://github.com/ahmaddii",
     },
     {
@@ -57,7 +57,7 @@ const Projects = () => {
       technologies: ["Golang", "Backend Imports", "GO Packages"],
       type: "Console App",
       users: "Personal One",
-      liveUrl: "https://github.com/yourusername/atm-backend",
+      liveUrl: "https://github.com/ahmaddii",
       githubUrl: "https://github.com/ahmaddii",
     },
     {
@@ -68,7 +68,7 @@ const Projects = () => {
       technologies: ["AI", "ML/AI", "Prompt Engineering", "Trillet AI"],
       type: "Tourist Agent",
       users: "200+ Assessments",
-      liveUrl: "https://tourio.ai",
+      liveUrl: "https://github.com/ahmaddii",
       githubUrl: "https://github.com/ahmaddii",
     },
     {
@@ -79,7 +79,7 @@ const Projects = () => {
       technologies: ["n8n", "Crypto API", "Google Email", "Json", "Network Calls"],
       type: "AI Automated Task",
       users: "100+ Users",
-      liveUrl: "https://crypto-trend.vercel.app",
+      liveUrl: "https://github.com/ahmaddii",
       githubUrl: "https://github.com/ahmaddii",
     },
   ];

@@ -44,7 +44,7 @@ const Footer = () => {
   <span className="text-muted-foreground font-semibold">OR</span>
 
   <a
-    href="https://www.upwork.com/freelancers/~YOUR_UPWORK_ID"
+    href="https://www.upwork.com/freelancers/~01ffa8225a7e8c2abc"
     target="_blank"
     rel="noopener noreferrer"
     className="flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white font-semibold px-6 py-3 rounded-full shadow-glow transition-all duration-300"

@@ -16,7 +16,7 @@ const About = () => {
     { icon: User, label: "Age", value: "20 years" },
     { icon: MapPin, label: "Location", value: "Islamabad, Pakistan" },
     { icon: GraduationCap, label: "Degree", value: "BS Software Engineering" },
-    { icon: Calendar, label: "Experience", value: "6 Months" },
+    { icon: Calendar, label: "Experience", value: "1 Year" },
   ];
 
   const skills = [
@@ -159,7 +159,7 @@ const About = () => {
                   creating innovative solutions and Products that make a Real Impact. My Expertise Includes:
                 </p>
                 
-                <div className="flex flex-wrap gap-3">
+                <div className="flex flex-wrap gap-3 mb-8">
                   {skills.map((skill, index) => (
                     <Badge 
                       key={index} 
@@ -170,6 +170,23 @@ const About = () => {
                     </Badge>
                   ))}
                 </div>
+
+           <div className="mt-8">
+  <h4 className="text-xl font-semibold mb-4">Watch My Introduction</h4>
+  <div className="flex justify-center">
+    <div className="w-full max-w-md aspect-[9/16] rounded-lg overflow-hidden shadow-lg">
+      <iframe
+        className="w-full h-full object-cover"
+        src="https://www.youtube.com/embed/o3PEWrhJpzM"
+        title="Introduction Video"
+        frameBorder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowFullScreen
+      ></iframe>
+    </div>
+  </div>
+</div>
+
               </CardContent>
             </Card>
           </div>

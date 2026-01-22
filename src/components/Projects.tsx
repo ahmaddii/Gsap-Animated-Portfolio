@@ -1,7 +1,7 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { ExternalLink, Github } from "lucide-react";
+import { ExternalLink, Github, ChevronLeft, ChevronRight } from "lucide-react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import finmindImg from "../assets/images/FinMind.png";
@@ -10,6 +10,12 @@ import digitalNexusImg from "../assets/images/Digital-Nexus.png";
 import AtmAppImg from "../assets/images/Atm-App.png";
 import CryptoTrendImg from "../assets/images/CryptoTrend.png";
 import TouristAgencyImg from "../assets/images/Toursti-Agency.png";
+import frame60 from "../assets/projects/Frame 60.png";
+import frame61 from "../assets/projects/Frame 61.png";
+import frame62 from "../assets/projects/Frame 62.png";
+import frame63 from "../assets/projects/Frame 63.png";
+import frame64 from "../assets/projects/Frame 64.png";
+import frame65 from "../assets/projects/Frame 65.png";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -17,6 +23,8 @@ const Projects = () => {
   const sectionRef = useRef(null);
   const titleRef = useRef(null);
   const cardsRef = useRef([]);
+  const snapshotsRef = useRef(null);
+  const [currentSnapshot, setCurrentSnapshot] = useState(0);
 
   const projects = [
     {
@@ -84,6 +92,15 @@ const Projects = () => {
     },
   ];
 
+  const appSnapshots = [
+    frame60,
+    frame61,
+    frame62,
+    frame63,
+    frame64,
+    frame65,
+  ];
+
   useEffect(() => {
     const ctx = gsap.context(() => {
       gsap.fromTo(
@@ -124,15 +141,50 @@ const Projects = () => {
           );
         }
       });
+
+      if (snapshotsRef.current) {
+        gsap.fromTo(
+          snapshotsRef.current,
+          { opacity: 0, y: 50 },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 0.8,
+            scrollTrigger: {
+              trigger: snapshotsRef.current,
+              start: "top 85%",
+              end: "top 60%",
+              toggleActions: "play none none reverse",
+            },
+          }
+        );
+      }
     }, sectionRef);
 
     return () => ctx.revert();
   }, []);
 
+  // Auto-scroll snapshots
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSnapshot((prev) => (prev < appSnapshots.length - 1 ? prev + 1 : 0));
+    }, 3000); // Change snapshot every 3 seconds
+
+    return () => clearInterval(interval);
+  }, [appSnapshots.length]);
+
   const addToRefs = (el) => {
     if (el && !cardsRef.current.includes(el)) {
       cardsRef.current.push(el);
     }
+  };
+
+  const handlePrevSnapshot = () => {
+    setCurrentSnapshot((prev) => (prev > 0 ? prev - 1 : appSnapshots.length - 1));
+  };
+
+  const handleNextSnapshot = () => {
+    setCurrentSnapshot((prev) => (prev < appSnapshots.length - 1 ? prev + 1 : 0));
   };
 
   return (
@@ -251,6 +303,95 @@ const Projects = () => {
           <div className="text-center p-8 bg-gradient-card rounded-2xl border border-border/50">
             <div className="text-4xl font-bold text-primary mb-2">6</div>
             <div className="text-muted-foreground">Months Experience</div>
+          </div>
+        </div>
+
+        {/* App Snapshots Section */}
+        <div ref={snapshotsRef} className="mt-20">
+          <div className="text-center mb-12">
+            <h3 className="text-3xl lg:text-4xl font-bold mb-4">
+              App{" "}
+              <span className="bg-gradient-hero bg-clip-text text-transparent">
+                Snapshots
+              </span>
+            </h3>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Take a closer look at the user interfaces and features of our applications
+            </p>
+          </div>
+
+          <div className="relative bg-gradient-to-br from-primary/5 to-accent/5 rounded-3xl p-8 md:p-12 overflow-hidden">
+            {/* Background decoration */}
+            <div className="absolute inset-0 opacity-20">
+              <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-primary/20 rounded-full blur-3xl" />
+              <div className="absolute bottom-0 left-0 w-80 h-80 bg-accent/30 rounded-full blur-3xl" />
+            </div>
+
+            <div className="relative">
+              {/* Main snapshot display */}
+              <div className="relative flex items-center justify-center mb-8 h-[500px]">
+                <div className="relative w-full h-full overflow-hidden">
+                  <div 
+                    className="flex h-full transition-transform duration-700 ease-in-out"
+                    style={{ transform: `translateX(-${currentSnapshot * 100}%)` }}
+                  >
+                    {appSnapshots.map((snapshot, idx) => (
+                      <div key={idx} className="min-w-full h-full flex-shrink-0 flex items-center justify-center px-4">
+                        <img
+                          src={snapshot}
+                          alt={`App snapshot ${idx + 1}`}
+                          className="max-h-full w-auto object-contain rounded-2xl shadow-2xl"
+                        />
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Navigation Arrows - Overlaid on image */}
+                <button
+                  onClick={handlePrevSnapshot}
+                  className="absolute left-4 top-1/2 -translate-y-1/2 bg-background/80 hover:bg-background p-3 rounded-full shadow-lg transition-all hover:scale-110 hover:shadow-glow z-10"
+                  aria-label="Previous snapshot"
+                >
+                  <ChevronLeft className="h-5 w-5 text-primary" />
+                </button>
+
+                <button
+                  onClick={handleNextSnapshot}
+                  className="absolute right-4 top-1/2 -translate-y-1/2 bg-background/80 hover:bg-background p-3 rounded-full shadow-lg transition-all hover:scale-110 hover:shadow-glow z-10"
+                  aria-label="Next snapshot"
+                >
+                  <ChevronRight className="h-5 w-5 text-primary" />
+                </button>
+              </div>
+
+              {/* Bottom Bar - Always Visible */}
+              <div className="flex items-center justify-between bg-background/60 backdrop-blur-sm rounded-2xl p-4 shadow-lg">
+                <div className="flex items-center gap-3 px-4">
+                  <span className="text-sm font-medium text-muted-foreground">
+                    {currentSnapshot + 1} / {appSnapshots.length}
+                  </span>
+                </div>
+
+                {/* Dot indicators */}
+                <div className="flex justify-center gap-2 flex-1">
+                  {appSnapshots.map((_, idx) => (
+                    <button
+                      key={idx}
+                      onClick={() => setCurrentSnapshot(idx)}
+                      className={`h-2 rounded-full transition-all duration-300 ${
+                        currentSnapshot === idx
+                          ? "w-8 bg-primary"
+                          : "w-2 bg-primary/30 hover:bg-primary/50"
+                      }`}
+                      aria-label={`Go to snapshot ${idx + 1}`}
+                    />
+                  ))}
+                </div>
+
+                <div className="w-20"></div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

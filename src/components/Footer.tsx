@@ -10,11 +10,11 @@ const Footer = () => {
 
         {/* Lottie Icon */}
         <div className="w-60 h-60 -mt-6">
-          <Lottie 
-            animationData={footerIcon} 
-            loop 
-            autoplay 
-            className="w-full h-full" 
+          <Lottie
+            animationData={footerIcon}
+            loop
+            autoplay
+            className="w-full h-full"
           />
         </div>
 
@@ -25,34 +25,34 @@ const Footer = () => {
               Interested in Collaborating?
             </h3>
             <p className="text-muted-foreground mb-8 max-w-2xl leading-relaxed">
-              Whether it's a project, mentorship, or just a chat about technology, feel free to reach out. 
+              Whether it's a project, mentorship, or just a chat about technology, feel free to reach out.
               I'm always open to new opportunities and creative collaborations.
             </p>
 
             {/* Contact Buttons */}
-        
-<div className="flex flex-wrap items-center gap-4">
-  <a
-    href="mailto:malikahmad6666666@gmail.com"
-    className="flex items-center gap-2 bg-gradient-primary hover:bg-gradient-hero text-white font-semibold px-6 py-3 rounded-full shadow-glow transition-all duration-300"
-  >
-    <MdEmail className="w-5 h-5" />
-    Email Me
-  </a>
 
-  {/* OR separator */}
-  <span className="text-muted-foreground font-semibold">OR</span>
+            <div className="flex flex-wrap items-center gap-4">
+              <a
+                href="mailto:malikahmad6666666@gmail.com"
+                className="flex items-center gap-2 bg-gradient-primary hover:bg-gradient-hero text-white font-semibold px-6 py-3 rounded-full shadow-glow transition-all duration-300"
+              >
+                <MdEmail className="w-5 h-5" />
+                Email Me
+              </a>
 
-  <a
-    href="https://www.upwork.com/freelancers/~01ffa8225a7e8c2abc"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white font-semibold px-6 py-3 rounded-full shadow-glow transition-all duration-300"
-  >
-    <SiUpwork className="w-5 h-5" />
-    Hire Me on Upwork
-  </a>
-</div>
+              {/* OR separator */}
+              <span className="text-muted-foreground font-semibold">OR</span>
+
+              <a
+                href="https://www.upwork.com/freelancers/malikahmadr"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white font-semibold px-6 py-3 rounded-full shadow-glow transition-all duration-300"
+              >
+                <SiUpwork className="w-5 h-5" />
+                Hire Me on Upwork
+              </a>
+            </div>
 
           </div>
 

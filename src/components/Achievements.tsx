@@ -8,7 +8,7 @@ import AtmAppimg from "../assets/images/Atm-App.png"
 import CryptoAppimg from "../assets/images/CryptoTrend.png"
 import DigitalAppimg from "../assets/images/Digital-Nexus.png"
 import FinmindAppimg from "../assets/images/FinMind.png"
-import RentEaseAppimg from "../assets/images/Rent-Ease.png"
+import proofit from "../assets/images/proofit.png"
 import TouristAppimg from "../assets/images/Toursti-Agency.png"
 
 
@@ -88,7 +88,7 @@ const Achievements = () => {
         {
           opacity: 1,
           y: 0,
-          duration: 0.8,
+          duration: 0.4,
           scrollTrigger: {
             trigger: sectionRef.current,
             start: "top 80%",
@@ -106,7 +106,7 @@ const Achievements = () => {
               opacity: 1,
               y: 0,
               rotation: 0,
-              duration: 0.6,
+              duration: 0.3,
               delay: i * 0.1,
               scrollTrigger: {
                 trigger: achievement,
@@ -124,13 +124,13 @@ const Achievements = () => {
         if (stat) {
           const numberElement = stat.querySelector('.stat-number');
           const targetValue = parseInt(numberElement.textContent.replace(/\D/g, '')) || 0;
-          
+
           gsap.fromTo(stat,
             { opacity: 0, scale: 0.8 },
             {
               opacity: 1,
               scale: 1,
-              duration: 0.8,
+              duration: 0.4,
               delay: i * 0.2,
               scrollTrigger: {
                 trigger: stat,
@@ -143,14 +143,14 @@ const Achievements = () => {
 
           // Counter animation
           gsap.to({}, {
-            duration: 2,
+            duration: 1,
             delay: i * 0.2 + 0.5,
             scrollTrigger: {
               trigger: stat,
               start: "top 85%",
               toggleActions: "play none none reverse"
             },
-            onUpdate: function() {
+            onUpdate: function () {
               const progress = this.progress();
               const currentValue = Math.round(targetValue * progress);
               if (numberElement.textContent.includes('K')) {
@@ -216,7 +216,7 @@ const Achievements = () => {
             Key <span className="bg-gradient-hero bg-clip-text text-transparent">Achievements</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Milestones that define my Journey as a Software engineer, showcasing impact, 
+            Milestones that define my Journey as a Software engineer, showcasing impact,
             innovation, and excellence in Mobile Development and team leadership.
           </p>
         </div>
@@ -242,7 +242,7 @@ const Achievements = () => {
                 <h3 className="text-xl font-bold mb-3 group-hover:text-primary transition-colors">
                   {achievement.title}
                 </h3>
-                
+
                 <p className="text-muted-foreground leading-relaxed">
                   {achievement.description}
                 </p>
@@ -271,7 +271,7 @@ const Achievements = () => {
 
 
         {/* Mobile Development Expertise Highlight */}
-       {/* Mobile Development Expertise Highlight */}
+        {/* Mobile Development Expertise Highlight */}
         <div className="mt-20">
           <div className="text-center mb-12">
             <div className="inline-flex items-center space-x-2 bg-gradient-primary/10 rounded-full px-6 py-3 border border-primary/20">
@@ -279,85 +279,85 @@ const Achievements = () => {
               <span className="text-primary font-semibold">Mobile Apps Expert</span>
             </div>
           </div>
-          
+
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* iPhone Mockup */}
             <div className="relative mx-auto lg:mx-0">
-              <div 
-  ref={phoneRef}
-  className="relative w-80 h-[640px] bg-gradient-to-b from-gray-900 to-black rounded-[3rem] p-2 shadow-2xl hover:shadow-3xl transition-shadow duration-500"
-  style={{ perspective: "1000px" }}
-  onMouseMove={handleMouseMove}
-  onMouseLeave={handleMouseLeave}
->
-  {/* Phone Frame */}
-  <div className="w-full h-full bg-white rounded-[2.5rem] overflow-hidden relative">
-    {/* Status Bar */}
-    <div className="bg-white px-6 py-3 flex justify-between items-center text-black text-sm font-medium">
-      <span>9:41</span>
-      <div className="flex space-x-1">
-        <div className="w-4 h-2 bg-black rounded-sm"></div>
-        <div className="w-4 h-2 bg-black rounded-sm"></div>
-        <div className="w-4 h-2 bg-black rounded-sm"></div>
-      </div>
-    </div>
-    
-    {/* Notch */}
-    <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-32 h-6 bg-black rounded-b-2xl"></div>
-    
-    {/* Screen Content */}
-    <div className="bg-gradient-to-br from-blue-50 to-purple-50 h-full pt-6 px-6 pb-14">
-      {/* App Grid */}
-      <div className="grid grid-cols-3 gap-4 mb-6">
-        <div ref={addToAppsRefs} className="rounded-2xl h-16 shadow-lg hover:scale-110 transition-transform cursor-pointer overflow-hidden">
-          <img src={AtmAppimg} alt="ATM App" className="w-full h-full object-cover" />
-        </div>
-        <div ref={addToAppsRefs} className="rounded-2xl h-16 shadow-lg hover:scale-110 transition-transform cursor-pointer overflow-hidden">
-          <img src={CryptoAppimg} alt="Crypto App" className="w-full h-full object-cover" />
-        </div>
-        <div ref={addToAppsRefs} className="rounded-2xl h-16 shadow-lg hover:scale-110 transition-transform cursor-pointer overflow-hidden">
-          <img src={DigitalAppimg} alt="Digital App" className="w-full h-full object-cover" />
-        </div>
-      </div>
+              <div
+                ref={phoneRef}
+                className="relative w-80 h-[640px] bg-gradient-to-b from-gray-900 to-black rounded-[3rem] p-2 shadow-2xl hover:shadow-3xl transition-shadow duration-500"
+                style={{ perspective: "1000px" }}
+                onMouseMove={handleMouseMove}
+                onMouseLeave={handleMouseLeave}
+              >
+                {/* Phone Frame */}
+                <div className="w-full h-full bg-white rounded-[2.5rem] overflow-hidden relative">
+                  {/* Status Bar */}
+                  <div className="bg-white px-6 py-3 flex justify-between items-center text-black text-sm font-medium">
+                    <span>9:41</span>
+                    <div className="flex space-x-1">
+                      <div className="w-4 h-2 bg-black rounded-sm"></div>
+                      <div className="w-4 h-2 bg-black rounded-sm"></div>
+                      <div className="w-4 h-2 bg-black rounded-sm"></div>
+                    </div>
+                  </div>
 
-      <div className="grid grid-cols-3 gap-4 mb-6">
-        <div ref={addToAppsRefs} className="rounded-2xl h-16 shadow-lg hover:scale-110 transition-transform cursor-pointer overflow-hidden">
-          <img src={FinmindAppimg} alt="FinMind App" className="w-full h-full object-cover" />
-        </div>
-        <div ref={addToAppsRefs} className="rounded-2xl h-16 shadow-lg hover:scale-110 transition-transform cursor-pointer overflow-hidden">
-          <img src={RentEaseAppimg} alt="RentEase App" className="w-full h-full object-cover" />
-        </div>
-        <div ref={addToAppsRefs} className="rounded-2xl h-16 shadow-lg hover:scale-110 transition-transform cursor-pointer overflow-hidden">
-          <img src={TouristAppimg} alt="Tourist App" className="w-full h-full object-cover" />
-        </div>
-      </div>
-    </div>
+                  {/* Notch */}
+                  <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-32 h-6 bg-black rounded-b-2xl"></div>
 
-    {/* Bottom Indicator (fixed at bottom) */}
-    <div className="absolute bottom-3 left-1/2 transform -translate-x-1/2">
-      <div className="w-28 h-1.5 bg-black rounded-full opacity-60"></div>
-    </div>
-  </div>
+                  {/* Screen Content */}
+                  <div className="bg-gradient-to-br from-blue-50 to-purple-50 h-full pt-6 px-6 pb-14">
+                    {/* App Grid */}
+                    <div className="grid grid-cols-3 gap-4 mb-6">
+                      <div ref={addToAppsRefs} className="rounded-2xl h-16 shadow-lg hover:scale-110 transition-transform cursor-pointer overflow-hidden">
+                        <img src={AtmAppimg} alt="ATM App" className="w-full h-full object-cover" />
+                      </div>
+                      <div ref={addToAppsRefs} className="rounded-2xl h-16 shadow-lg hover:scale-110 transition-transform cursor-pointer overflow-hidden">
+                        <img src={CryptoAppimg} alt="Crypto App" className="w-full h-full object-cover" />
+                      </div>
+                      <div ref={addToAppsRefs} className="rounded-2xl h-16 shadow-lg hover:scale-110 transition-transform cursor-pointer overflow-hidden">
+                        <img src={DigitalAppimg} alt="Digital App" className="w-full h-full object-cover" />
+                      </div>
+                    </div>
 
-  {/* Floating particles */}
-  <div className="absolute -top-4 -left-4 w-3 h-3 bg-primary rounded-full animate-ping"></div>
-  <div className="absolute -bottom-4 -right-4 w-2 h-2 bg-purple-500 rounded-full animate-bounce"></div>
-  <div className="absolute top-1/2 -right-8 w-4 h-4 bg-blue-400 rounded-full animate-pulse"></div>
-</div>
-</div>
+                    <div className="grid grid-cols-3 gap-4 mb-6">
+                      <div ref={addToAppsRefs} className="rounded-2xl h-16 shadow-lg hover:scale-110 transition-transform cursor-pointer overflow-hidden">
+                        <img src={FinmindAppimg} alt="FinMind App" className="w-full h-full object-cover" />
+                      </div>
+                      <div ref={addToAppsRefs} className="rounded-2xl h-16 shadow-lg hover:scale-110 transition-transform cursor-pointer overflow-hidden">
+                        <img src={proofit} alt="RentEase App" className="w-full h-full object-cover" />
+                      </div>
+                      <div ref={addToAppsRefs} className="rounded-2xl h-16 shadow-lg hover:scale-110 transition-transform cursor-pointer overflow-hidden">
+                        <img src={TouristAppimg} alt="Tourist App" className="w-full h-full object-cover" />
+                      </div>
+                    </div>
+                  </div>
 
-            
+                  {/* Bottom Indicator (fixed at bottom) */}
+                  <div className="absolute bottom-3 left-1/2 transform -translate-x-1/2">
+                    <div className="w-28 h-1.5 bg-black rounded-full opacity-60"></div>
+                  </div>
+                </div>
+
+                {/* Floating particles */}
+                <div className="absolute -top-4 -left-4 w-3 h-3 bg-primary rounded-full animate-ping"></div>
+                <div className="absolute -bottom-4 -right-4 w-2 h-2 bg-purple-500 rounded-full animate-bounce"></div>
+                <div className="absolute top-1/2 -right-8 w-4 h-4 bg-blue-400 rounded-full animate-pulse"></div>
+              </div>
+            </div>
+
+
             {/* Content */}
             <div className="text-center lg:text-left">
               <h3 className="text-2xl lg:text-3xl font-bold mb-4">
                 Mobile Development Expertise
               </h3>
               <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-                Specializing in Flutter development with a Proven Track Record of Building 
-                High-Impact Mobile Applications. From Fintech MSME'S platforms to 
+                Specializing in Flutter development with a Proven Track Record of Building
+                High-Impact Mobile Applications. From Fintech MSME'S platforms to
                 Professional Level apps, I create Solutions that Serve Thousands of Users Worldwide.
               </p>
-              
+
               {/* Stats */}
               <div className="grid grid-cols-2 gap-6">
                 <div className="bg-gradient-card rounded-2xl p-6 border border-border/50">
@@ -373,7 +373,7 @@ const Achievements = () => {
           </div>
         </div>
 
-       
+
       </div>
     </section>
   );

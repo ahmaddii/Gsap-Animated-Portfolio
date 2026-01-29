@@ -66,7 +66,7 @@ const Skills = () => {
         { name: "Mobile Development", icon: <SiFlutter size={28} />, mastery: 95, category: "Cross-platform" },
         { name: "API Integration", icon: <SiSupabase size={28} />, mastery: 90, category: "Backend" },
         { name: "Performance Optimization", icon: <SiGooglecloud size={28} />, mastery: 85, category: "Optimization" },
-        { name: "AI and Automation", icon: <SiPython size={28} />, mastery: 88, category: "AI" },
+        { name: "AI Integration", icon: <SiPython size={28} />, mastery: 88, category: "AI" },
       ],
     },
   ];
@@ -97,8 +97,8 @@ const Skills = () => {
     { icon: <SiAndroid size={50} />, name: "Android" },
     { icon: <SiMongodb size={50} />, name: "Mongo Db" },
     { icon: <SiStackoverflow size={50} />, name: "Stack Overflow" },
-    { icon: <SiTypescript size ={50} />, name: "TypeScript " },
-    
+    { icon: <SiTypescript size={50} />, name: "TypeScript " },
+
   ];
 
   const getMasteryColor = (mastery) => {
@@ -125,7 +125,7 @@ const Skills = () => {
         {
           opacity: 1,
           y: 0,
-          duration: 1,
+          duration: 0.5,
           ease: "power3.out",
           scrollTrigger: {
             trigger: sectionRef.current,
@@ -143,7 +143,7 @@ const Skills = () => {
             opacity: 1,
             y: 0,
             scale: 1,
-            duration: 0.2,
+            duration: 0.15,
             delay: i * 0.03,
             ease: "power3.out",
             scrollTrigger: {
@@ -192,7 +192,7 @@ const Skills = () => {
   return (
     <section ref={sectionRef} id="skills" className="py-20 bg-secondary/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Title */}
         <div ref={titleRef} className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4">Skills & Technologies</h2>
@@ -260,31 +260,31 @@ const Skills = () => {
         </div>
 
         {/* Scrolling Icons */}
-<div className="mt-20 relative overflow-hidden">
-  {/* Heading */}
-  <h3 className="text-3xl font-bold mb-20 text-center">My  Tech  Stack</h3>
+        <div className="mt-20 relative overflow-hidden">
+          {/* Heading */}
+          <h3 className="text-3xl font-bold mb-20 text-center">My  Tech  Stack</h3>
 
 
-  <motion.div
-    className="flex gap-12 min-w-max"
-    animate={{ x: ["0%", "-50%"] }}
-    transition={{ repeat: Infinity, duration: 60, ease: "linear" }}
-  >
-    {[...techIcons, ...techIcons].map((item, index) => (
-      <div
-        key={index}
-        className="flex flex-col items-center justify-center min-w-[100px] hover:scale-110 transition-transform duration-300"
-      >
-        {item.icon}
-        <p className="text-sm text-muted-foreground mt-2">{item.name}</p>
-      </div>
-    ))}
-  </motion.div>
-</div>
+          <motion.div
+            className="flex gap-12 min-w-max"
+            animate={{ x: ["0%", "-50%"] }}
+            transition={{ repeat: Infinity, duration: 60, ease: "linear" }}
+          >
+            {[...techIcons, ...techIcons].map((item, index) => (
+              <div
+                key={index}
+                className="flex flex-col items-center justify-center min-w-[100px] hover:scale-110 transition-transform duration-300"
+              >
+                {item.icon}
+                <p className="text-sm text-muted-foreground mt-2">{item.name}</p>
+              </div>
+            ))}
+          </motion.div>
+        </div>
 
 
         {/* Stats */}
-       <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 mb-30">
+        <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 mb-30">
           {[
             { label: "Months Experience", value: "6+" },
             { label: "Technologies", value: "19+" },

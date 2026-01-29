@@ -33,36 +33,36 @@ const Experience = () => {
     },
     {
       title: "Associate Software Engineer",
-      company: "Digital Nexus",
+      company: "SEO Pro Analyzer",
       location: "Islamabad",
-      duration: "2024",
+      duration: "2025",
       description:
-        "Created Full Stack Application where User can Post Job data Saved in SQL Database and Fetched Using PHP Display to the FrontEnd Page",
+        "Created a Full Scale End to End Tool Application for SEO Analysis",
       highlight: "Best 4th Semester Project of my Class",
       responsibilities: [
-        "Created Dashboard for the Users Application",
-        "Levaraging Php Skills",
-        "Created design from Scratch",
-        "Defend in front of Teacher How we can Scale up with AI",
+        "Created a Home Dashboard where Pasting Website URL And Get the Result",
+        "Simple SEO Screen Shows the top 50 KeyWords Used in that Website",
+        "AI Analysis Gives Deep Insights with Montly Revenue Report in PDF",
+        "Gemini API Integration with Golang Backend Deploy on Railway",
       ],
-      technologies: ["Bootstrap", "Javascript", "MySql", "Php", "Css"],
+      technologies: ["Flutter", "Golang", "Supabase", "Gemini API", "Railway Cloud Deployment"],
     },
     {
       title: "Associate Software Engineer – Flutter",
-      company: "RentEase",
+      company: "proofIT",
       location: "Islamabad, Pakistan",
-      duration: "June 2025 - July 2025 (6 months)",
+      duration: "Jan 2026",
       description:
-        "Created a Rental Home Solution in which User can Search his Good Home with Rental Listings",
+        "Created a BlockChain Type End to Encrypted Application with Hash Evidence Storing",
       highlight:
         "Delivered a production Ready Rental Solution with seamless Real time home listings and location based search.",
       responsibilities: [
-        "Managed the Google Cloud API'S",
-        "Implement Google Maps Functionlity",
-        "Favorites Screen with Real Time Supabase Listings",
-        "Real Time Home Listings with Web Hooks",
+        "Managed the Evidence with Pin Code",
+        "Proper Auth Setup",
+        "Real Time Audio or Video Recording",
+        "S3 Buckets Storage",
       ],
-      technologies: ["Flutter", "Flutter-Packages", "Supabase", "Dart", "Maps API"],
+      technologies: ["Flutter", "Flutter-Packages", "Supabase", "Dart", "AWS S3"],
     },
   ];
 

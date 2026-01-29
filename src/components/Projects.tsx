@@ -5,17 +5,19 @@ import { ExternalLink, Github, ChevronLeft, ChevronRight } from "lucide-react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import finmindImg from "../assets/images/FinMind.png";
-import renteaseImg from "../assets/images/Rent-Ease.png";
 import digitalNexusImg from "../assets/images/Digital-Nexus.png";
-import AtmAppImg from "../assets/images/Atm-App.png";
 import CryptoTrendImg from "../assets/images/CryptoTrend.png";
 import TouristAgencyImg from "../assets/images/Toursti-Agency.png";
-import frame60 from "../assets/projects/Frame 60.png";
-import frame61 from "../assets/projects/Frame 61.png";
-import frame62 from "../assets/projects/Frame 62.png";
-import frame63 from "../assets/projects/Frame 63.png";
-import frame64 from "../assets/projects/Frame 64.png";
-import frame65 from "../assets/projects/Frame 65.png";
+import szabistLogo from "../assets/images/szabist-logo.png";
+import seoProImg from "../assets/images/Seo-Pro.png";
+import proofit from "../assets/images/proofit.png"
+import frame60 from "../assets/projects/Frame-60.png";
+import frame61 from "../assets/projects/Frame-61.png";
+import frame62 from "../assets/projects/Frame-62.png";
+import frame63 from "../assets/projects/Frame-63.png";
+import frame64 from "../assets/projects/Frame-64.png";
+import frame65 from "../assets/projects/Frame-65.png";
+import frame66 from "../assets/projects/Frame-66.png";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -34,15 +36,15 @@ const Projects = () => {
       technologies: ["Flutter", "Dart", "Supabase", "Gemini APIs"],
       type: "Mobile App",
       users: "Published on Playstore",
-      liveUrl: "https://github.com/ahmaddii",
+      liveUrl: "https://play.google.com/store/apps/details?id=com.ahmad.finmind",
       githubUrl: "https://github.com/ahmaddii",
     },
     {
-      title: "RentEase",
+      title: "SEO Pro Analyzer",
       description:
-        "Feature-rich rental application for efficient home discovery.",
-      image: renteaseImg,
-      technologies: ["Flutter", "Real-time APIs", "Listings Logic", "Google Maps"],
+        "Get Real Time SEO Insights of Your Website",
+      image: seoProImg,
+      technologies: ["Flutter", "Real-time APIs", "Golang", "Railway", "Gemini API's"],
       type: "Mobile App",
       users: "Testing Users",
       liveUrl: "https://github.com/ahmaddii",
@@ -55,16 +57,16 @@ const Projects = () => {
       technologies: ["Bootstrap", "PHP", "MySQL", "CSS"],
       type: "Web App",
       users: "100+ Users",
-      liveUrl: "https://github.com/ahmaddii",
+      liveUrl: "https://digitalnexuss.netlify.app/",
       githubUrl: "https://github.com/ahmaddii",
     },
     {
-      title: "ATM Backend Simulation",
-      description: "Created an ATM Backend in Golang with Proper Error Handling",
-      image: AtmAppImg,
-      technologies: ["Golang", "Backend Imports", "GO Packages"],
-      type: "Console App",
-      users: "Personal One",
+      title: "QR Based Attendence Application Szabist University",
+      description: "Created an QR Based Attendence App for Szabist University to mark Instant Attendence",
+      image: szabistLogo,
+      technologies: ["Flutter", "Supabase", "OTP Auth ", "REST API"],
+      type: "Mobile App",
+      users: "Testing Users",
       liveUrl: "https://github.com/ahmaddii",
       githubUrl: "https://github.com/ahmaddii",
     },
@@ -80,13 +82,13 @@ const Projects = () => {
       githubUrl: "https://github.com/ahmaddii",
     },
     {
-      title: "Crypto Trend Analyzer",
+      title: "proofIT",
       description:
-        "Automated Crypto Task sending daily emails analyzing crypto prices",
-      image: CryptoTrendImg,
-      technologies: ["n8n", "Crypto API", "Google Email", "Json", "Network Calls"],
-      type: "AI Automated Task",
-      users: "100+ Users",
+        "BlockChain Style Evidence Storing with End to End Encryption in Database",
+      image: proofit,
+      technologies: ["Flutter", "Auth", "Google Email", "Supabase", "Encryption Secuity", "Scanning Document"],
+      type: "Mobile App",
+      users: "Testing Users",
       liveUrl: "https://github.com/ahmaddii",
       githubUrl: "https://github.com/ahmaddii",
     },
@@ -99,6 +101,7 @@ const Projects = () => {
     frame63,
     frame64,
     frame65,
+    frame66,
   ];
 
   useEffect(() => {
@@ -109,7 +112,7 @@ const Projects = () => {
         {
           opacity: 1,
           y: 0,
-          duration: 0.8,
+          duration: 0.4,
           scrollTrigger: {
             trigger: sectionRef.current,
             start: "top 80%",
@@ -128,7 +131,7 @@ const Projects = () => {
               opacity: 1,
               y: 0,
               scale: 1,
-              duration: 0.6,
+              duration: 0.3,
               delay: i * 0.1,
               scrollTrigger: {
                 trigger: card,
@@ -149,7 +152,7 @@ const Projects = () => {
           {
             opacity: 1,
             y: 0,
-            duration: 0.8,
+            duration: 0.4,
             scrollTrigger: {
               trigger: snapshotsRef.current,
               start: "top 85%",
@@ -329,9 +332,9 @@ const Projects = () => {
 
             <div className="relative">
               {/* Main snapshot display */}
-              <div className="relative flex items-center justify-center mb-8 h-[500px]">
+              <div className="relative flex items-center justify-center mb-8 h-[300px] md:h-[500px]">
                 <div className="relative w-full h-full overflow-hidden">
-                  <div 
+                  <div
                     className="flex h-full transition-transform duration-700 ease-in-out"
                     style={{ transform: `translateX(-${currentSnapshot * 100}%)` }}
                   >
@@ -379,11 +382,10 @@ const Projects = () => {
                     <button
                       key={idx}
                       onClick={() => setCurrentSnapshot(idx)}
-                      className={`h-2 rounded-full transition-all duration-300 ${
-                        currentSnapshot === idx
-                          ? "w-8 bg-primary"
-                          : "w-2 bg-primary/30 hover:bg-primary/50"
-                      }`}
+                      className={`h-2 rounded-full transition-all duration-300 ${currentSnapshot === idx
+                        ? "w-8 bg-primary"
+                        : "w-2 bg-primary/30 hover:bg-primary/50"
+                        }`}
                       aria-label={`Go to snapshot ${idx + 1}`}
                     />
                   ))}

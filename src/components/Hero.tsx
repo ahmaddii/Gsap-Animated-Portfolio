@@ -97,7 +97,7 @@ const Hero = () => {
       gsap.fromTo(
         contentRef.current,
         { opacity: 0, y: 50 },
-        { opacity: 1, y: 0, duration: 1, ease: "power2.out" }
+        { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" }
       );
 
       // Animate profile image
@@ -108,7 +108,7 @@ const Hero = () => {
           opacity: 1,
           scale: 1,
           rotation: 0,
-          duration: 1.2,
+          duration: 0.6,
           delay: 0.3,
           ease: "back.out(1.7)",
         }
@@ -124,7 +124,7 @@ const Hero = () => {
               opacity: 0.3,
               scale: 1,
               rotation: 0,
-              duration: 0.8,
+              duration: 0.4,
               delay: i * 0.1,
               scrollTrigger: {
                 trigger: heroRef.current,
@@ -309,12 +309,12 @@ const Hero = () => {
 
     const userMessage = { sender: 'user', text: messageToSend };
     setMessages((prevMessages) => [...prevMessages, userMessage]);
-    
+
     setInputMessage(''); // Clear input immediately
 
     setIsTyping(true);
     // Ensure getBotResponse is called with the actual message text
-    const botText = await getBotResponse(messageToSend); 
+    const botText = await getBotResponse(messageToSend);
     setIsTyping(false);
 
     const botMessage = { sender: 'bot', text: botText };
@@ -349,22 +349,22 @@ const Hero = () => {
         {/* NEW: Multiple Expanding Pulsing Circles */}
         {Array.from({ length: 5 }).map((_, i) => ( // 5 circles for good coverage
           <div key={`exp-circle-${i}`}
-               className="expanding-circle absolute w-24 h-24 rounded-full bg-purple-500/40 blur-md" // Adjusted opacity for more visibility
-               style={{
-                 left: `${Math.random() * 100}%`,
-                 top: `${Math.random() * 100}%`,
-               }}
+            className="expanding-circle absolute w-24 h-24 rounded-full bg-purple-500/40 blur-md" // Adjusted opacity for more visibility
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+            }}
           ></div>
         ))}
 
         {/* NEW: Multiple Slow Drifting Squares */}
         {Array.from({ length: 4 }).map((_, i) => ( // 4 squares
           <div key={`drift-square-${i}`}
-               className="drifting-square absolute w-20 h-20 rounded-lg bg-gradient-to-tr from-blue-400/50 to-green-400/50 blur-sm" // Adjusted opacity for more visibility
-               style={{
-                 left: `${Math.random() * 100}%`,
-                 top: `${Math.random() * 100}%`,
-               }}
+            className="drifting-square absolute w-20 h-20 rounded-lg bg-gradient-to-tr from-blue-400/50 to-green-400/50 blur-sm" // Adjusted opacity for more visibility
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+            }}
           ></div>
         ))}
 
@@ -508,16 +508,15 @@ const Hero = () => {
           {/* Chatbot Body - Updated to display messages */}
           <div className="flex-1 overflow-y-auto space-y-3 p-2 custom-scrollbar">
             {messages.map((msg, index) => (
-              <div 
+              <div
                 key={index}
                 className={`flex ${msg.sender === 'user' ? 'justify-end' : 'justify-start'}`}
               >
-                <span 
-                  className={`inline-block p-3 rounded-lg text-sm break-words max-w-[85%] ${
-                    msg.sender === 'user'
+                <span
+                  className={`inline-block p-3 rounded-lg text-sm break-words max-w-[85%] ${msg.sender === 'user'
                       ? 'bg-gradient-to-r from-blue-500 to-blue-600 text-white shadow-md'
                       : 'bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-gray-100 shadow-sm'
-                  }`}
+                    }`}
                 >
                   {msg.text}
                 </span>
@@ -550,33 +549,33 @@ const Hero = () => {
           </div>
 
           {/* Chatbot Input - Connected to state and function */}
-      {/* Chatbot Input - Updated */}
-{/* Chatbot Input - Updated */}
-<div className="mt-4 flex items-center justify-between gap-2">
-  {/* Input Box (smaller width, not full) */}
-  <input
-    type="text"
-    placeholder="Ask me Anything..."
-    value={inputMessage}
-    onChange={(e) => setInputMessage(e.target.value)}
-    onKeyPress={(e) => e.key === "Enter" && handleSendMessage(inputMessage)}
-    className="w-56 border border-gray-300 dark:border-gray-600 rounded-lg px-3 py-1.5 text-sm 
+          {/* Chatbot Input - Updated */}
+          {/* Chatbot Input - Updated */}
+          <div className="mt-4 flex items-center justify-between gap-2">
+            {/* Input Box (smaller width, not full) */}
+            <input
+              type="text"
+              placeholder="Ask me Anything..."
+              value={inputMessage}
+              onChange={(e) => setInputMessage(e.target.value)}
+              onKeyPress={(e) => e.key === "Enter" && handleSendMessage(inputMessage)}
+              className="w-56 border border-gray-300 dark:border-gray-600 rounded-lg px-3 py-1.5 text-sm 
                focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent 
                dark:bg-gray-700 dark:text-white placeholder-gray-500 dark:placeholder-gray-400"
-    disabled={isTyping}
-  />
+              disabled={isTyping}
+            />
 
-  {/* Send Button (separate & compact) */}
-  <button
-    onClick={() => handleSendMessage(inputMessage)}
-    className="bg-gradient-to-r from-primary to-blue-600 text-white rounded-lg px-4 py-2 text-sm 
+            {/* Send Button (separate & compact) */}
+            <button
+              onClick={() => handleSendMessage(inputMessage)}
+              className="bg-gradient-to-r from-primary to-blue-600 text-white rounded-lg px-4 py-2 text-sm 
                flex items-center justify-center transition-colors duration-200 
                hover:from-blue-600 hover:to-primary shadow-sm min-w-[60px]"
-    disabled={isTyping}
-  >
-    Send
-  </button>
-</div>
+              disabled={isTyping}
+            >
+              Send
+            </button>
+          </div>
 
 
 

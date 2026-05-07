@@ -1,0 +1,17 @@
+name: TestForge AI Analysis
+on:
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      
+      - name: TestForge AI Scan
+        run: |
+          curl -X POST "http://localhost:8080/api/generate" \
+          -H "Authorization: Bearer ${{ secrets.TESTFORGE_TOKEN }}" \
+          -d '{"project_id": "a5ad173e-81e6-46ac-8e1d-51238de60b08"}'
